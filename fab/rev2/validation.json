@@ -1,5 +1,5 @@
 {
-  "status": "ready_for_supplier_review_not_ordered",
+  "status": "supplier_blocked_led_economic_eligibility",
   "smt_bom_lines": 16,
   "smt_components": 50,
   "cpl_rows": 50,
@@ -10,5 +10,8 @@
   "erc_violations": 0,
   "assembly_rotations_verified": false,
   "board_sha256": "09fc77725a65dca7632566e44d7bb128420de44fd1a20d1f6762f998f3344631",
-  "qr_decoded": "https://github.com/verIdyia/astra-board"
+  "qr_decoded": "https://github.com/verIdyia/astra-board",
+  "supplier_bom_matched_lines": 16,
+  "supplier_selected_lines": 15,
+  "supplier_blocker": "C2874885 Standard Only; V6/V7 alternatives also rejected despite Economic listing"
 }
