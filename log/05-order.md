@@ -21,3 +21,22 @@ User explicitly approved the assembly-service terms. Clicked Next, entered the P
 Two alternatives were investigated and attempted: C55109525 V7 and C52941391 V6. Economic filters and part-detail pages indicate support, but both actual selection attempts show a Standard-only rejection. The quote itself remains Economic, Top Side, qty 10. The V6 PDF pin/land geometry was inspected using the PDF skill with bundled pypdfium2 fallback (Poppler executable absent). A TME PDF fetch was blocked; the exact LCSC-hosted manufacturer PDF succeeded. V7 datasheet was not found and no V7 compatibility claim is made.
 No schematic/PCB/BOM substitution was applied. Previous ERC/DRC remain zero; no new circuit checks needed for read-only investigation. BOM/CPL are uploaded, but assembly rotations/polarity, complete supplier allocation and payable total remain unverified. Stop after two failed supplier-selection attempts; draft a support inquiry and request user authorization before sending. Chrome quote tab marked for handoff. No order/payment or outbound support message.
 Quota: weekly 78% at session start; end usage in log/usage.tsv. Raw recording run10-20260910-200200.mov. Media: 00:06:51 supplier LED restriction; end marker records stop.
+
+
+## Owner-directed budget pause — 2026-09-10 20:30 KST
+
+### What happened
+The owner reported roughly US$123 for Standard and US$85 for Economic in the 10-board quote discussion, then requested updating the repository and pausing because the cost was too high. These totals are user-reported, not verified checkout figures; shipping/tax inclusion and complete LED population remain unknown. No browser interaction or design modification was performed in this documentation session. README, manufacturing-package status and DECISIONS now record the pause. Support inquiry remains unsent. No order or payment was submitted.
+A read-only browser inspection between the previous recorded session and this update showed Standard selected; its cause was not established. This supersedes the earlier Economic screen state, not the BRIEF requirement. That short inspection was not recorded; this is a recording-process omission.
+
+### Human interventions
+The owner supplied the two quote amounts and explicitly stopped procurement for budget reasons. This overrides automatic phase progression; firmware and board.json remain unimplemented. No hard design constraint was relaxed.
+
+### Verification
+Existing fab/rev2 reports: ERC 0 errors / 0 warnings; DRC 0 violations / 0 unconnected. Hardware and fabrication payloads are unchanged; no fresh ERC/DRC run was needed for documentation edits. Checked the preserved board hash against validation.json and reviewed the Git diff. Unverified: supplier LED eligibility, complete assembly allocation, rotations/polarity, final price, USB signal integrity, regulator temperature and all physical hardware behavior.
+
+### Scoreboard
+Session start weekly usage 82%; five-hour window unavailable. Session end weekly usage 83% (82% → 83%), reset 09-15 11:37 KST, from log/usage.tsv. Human time was not measured.
+
+### Media candidates
+None for this documentation-only session; no KiCad, browser or hardware interaction. Previous run10 marker at 00:06:51 captures the supplier LED restriction.
