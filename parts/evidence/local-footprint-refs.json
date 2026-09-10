@@ -1,0 +1,16 @@
+{
+  "D6": "Astra:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm",
+  "D7": "Astra:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm",
+  "SW4": "Astra:SW_SPST_TS-1088-xR020",
+  "SW1": "Astra:SW_SPST_TS-1088-xR020",
+  "U1": "Astra:ESP32-C3-WROOM-02",
+  "D2": "Astra:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm",
+  "SW3": "Astra:SW_SPST_TS-1088-xR020",
+  "D3": "Astra:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm",
+  "D8": "Astra:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm",
+  "D4": "Astra:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm",
+  "D5": "Astra:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm",
+  "D1": "Astra:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm",
+  "J1": "Astra:USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+  "SW2": "Astra:SW_SPST_TS-1088-xR020"
+}

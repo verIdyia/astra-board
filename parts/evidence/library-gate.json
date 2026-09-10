@@ -1,0 +1,10 @@
+{
+  "kicad": "10.0.6",
+  "verified_parts": 19,
+  "symbols_and_footprints_exist": true,
+  "smt_bom_lines": 16,
+  "smt_extended_lines": 7,
+  "source": "KiCad MCP downloaded CDFER JLCPCB snapshot; live order stock not yet verified",
+  "local_derivative": "Astra:ESP32-C3-WROOM-02; copied standard part, 12 thermal holes 0.2 -> 0.3 mm",
+  "artwork_variants": "Four exact standard-library derivatives in lib/Astra.pretty; 14 schematic/PCB references synchronized"
+}

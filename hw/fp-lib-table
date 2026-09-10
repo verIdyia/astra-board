@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Astra")(type "KiCad")(uri "/Users/daum/dev/kicad/astra-board/lib/Astra.pretty")(options "")(descr ""))
+)

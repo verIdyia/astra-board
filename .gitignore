@@ -1,0 +1,16 @@
+media/raw/
+*.kicad_prl
+*-backups/
+fp-info-cache
+__pycache__/
+log/usage-raw/
+.DS_Store
+*.lck
+.env
+.env.*
+# Local experiment output; publish curated results instead.
+en/
+log/freerouting-*.log
+log/usage.tsv
+hw/export/
+fab/draft/
