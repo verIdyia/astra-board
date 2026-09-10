@@ -4,3 +4,5 @@ GitHub CLI is installed but no GitHub host is authenticated. Started the officia
 Usage at preparation: weekly 71%; five-hour window unavailable. No KiCad or browser interaction during this preparation.
 
 Authentication completed as verIdyia. Selected design sources, local footprints, sourcing evidence, curated logs and reproducibility scripts for the initial commit. Raw account responses, recordings, quota TSV, draft manufacturing files and intermediate exports are excluded. Staged source scan found no common token/private-key patterns. Commit email is the GitHub account's noreply address. Repository creation requested by the user; public visibility follows BRIEF.
+
+Created and pushed public verIdyia/astra-board, default branch main. Added the verified repository QR and selected final manufacturing exports in a follow-up commit. The fabrication package is for supplier review, not a claim of verified hardware.

@@ -1,0 +1,46 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-10T16:05:15",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/ac19aef2-f0b3-44b3-8d13-e0717f9c15a4",
+            "violations": []
+        },
+        {
+            "path": "/USB and power/",
+            "uuid_path": "/ac19aef2-f0b3-44b3-8d13-e0717f9c15a4/ddaecd83-3e24-4de4-be69-ce34e2a66262",
+            "violations": []
+        },
+        {
+            "path": "/LEDs and sound/",
+            "uuid_path": "/ac19aef2-f0b3-44b3-8d13-e0717f9c15a4/9404fc65-5dd2-4abe-9700-63e78acdf079",
+            "violations": []
+        }
+    ],
+    "source": "astra-board.kicad_sch"
+}

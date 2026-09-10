@@ -1,0 +1,12 @@
+{
+  "status": "ready_for_supplier_review_not_ordered",
+  "smt_bom_lines": 16,
+  "smt_components": 50,
+  "cpl_rows": 50,
+  "reference_sets_match": true,
+  "qr_decoded": "https://github.com/verIdyia/astra-board",
+  "drc_violations": 0,
+  "drc_unconnected": 0,
+  "assembly_rotations_verified": false,
+  "board_sha256": "85a8e3d1e750b740e14ae6567a0ca04c0766d743cdcb2b3bb94eeccd1782cceb"
+}

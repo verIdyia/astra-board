@@ -71,3 +71,7 @@ ERC rerun: zero violations in erc-final.json. Front/back SVGs and STEP refreshed
 The DRC gate passes, but the required repository QR is still pending the actual public URL. Asked user for URL; no placeholder inserted.
 Quota at start 70%, DRC pass 71%; five-hour window unavailable.
 Media candidates: run04-20260910-160313.mov, 00:00:48 EN crossing change; 00:01:23 DRC passes. Latest exports remain named NOT-FOR-FAB while QR is pending.
+
+## Repository QR completion — 2026-09-10 16:15 KST
+Public repository created after user authentication. Added its QR on B.Silkscreen, 11.1 mm square with 0.3 mm cells and quiet border. DRC after the QR: zero violations and zero unconnected. Independent ZXing decode of the actual KiCad SVG raster matched https://github.com/verIdyia/astra-board. Physical scan quality awaits fabricated hardware. Front/back SVG and STEP refreshed; STEP still omits the absent J1 model.
+Media: run05 00:01:02 QR insertion; 00:02:10 fabrication validation.

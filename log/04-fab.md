@@ -13,3 +13,9 @@ Unverified: JLCPCB assembly orientation/polarity preview, final QR, supplier liv
 DRC 0 / ERC 0 / five-hour unavailable / weekly 70%→71% at DRC pass.
 ## Media candidates
 run04-20260910-160313.mov: 00:01:23 DRC pass; updated front/back SVGs.
+
+## Manufacturing export gate passed — 2026-09-10 16:16 KST
+QR requirement resolved. Current exports are in fab/rev1 with Gerber ZIP, separate drills, BOM, CPL and validation report. All files are non-empty; SMT BOM 16 lines / 50 components and CPL 50 top-side rows exactly match schematic SMT references. Current DRC and ERC reports accompany the package. Board SHA-256 recorded in validation.json.
+Supplier assembly preview, rotations, polarity and final stock allocation remain unverified. Uploaded only the Gerber ZIP to JLCPCB for review. No order/payment submitted.
+Usage: weekly 71% at QR start →72% at fabrication gate; five-hour unavailable.
+Media: run05-20260910-161424.mov, 00:01:02 QR, 00:02:10 fabrication gate.

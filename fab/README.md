@@ -1,7 +1,5 @@
 # Fabrication status
-Draft only: repository QR URL is pending. Do not manufacture these files.
-The board currently passes DRC (hw/export/drc-attempt8.json) and ERC (hw/export/erc-final.json).
-draft/ contains Gerbers, separate PTH/NPTH Excellon drills, the drill report, raw KiCad positions, JLCPCB BOM and CPL, and validation.json.
-BOM has 16 SMT lines / 50 components; CPL has 50 top-side rows, matched to schematic references. BZ1, J3 and J4 are owner-soldered and excluded.
-Gerbers, drills and positions use the same absolute origin; positions use KiCad's Y-up convention. Rotations are raw KiCad angles and must be verified against the JLCPCB assembly preview before release.
-Regenerate after adding the QR, rerun DRC, then validate and upload the final package. No draft package has been uploaded.
+`rev1/` is the current package for supplier review. It includes the repository QR, Gerbers, drills, BOM/CPL and machine-check reports. No order has been placed.
+DRC and ERC report zero violations. BOM has 16 SMT lines / 50 components, and CPL has 50 top-side rows matching the schematic. BZ1, J3 and J4 are owner-soldered.
+All exports use the absolute origin; CPL Y follows KiCad's Y-up convention. Rotations are raw KiCad angles and still require JLCPCB assembly-preview verification. Hardware and thermal performance are unverified.
+The STEP preview remains local and omits the absent USB-C 3D model. Draft and intermediate artifacts are excluded from version control.
