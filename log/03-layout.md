@@ -75,3 +75,30 @@ Media candidates: run04-20260910-160313.mov, 00:00:48 EN crossing change; 00:01:
 ## Repository QR completion — 2026-09-10 16:15 KST
 Public repository created after user authentication. Added its QR on B.Silkscreen, 11.1 mm square with 0.3 mm cells and quiet border. DRC after the QR: zero violations and zero unconnected. Independent ZXing decode of the actual KiCad SVG raster matched https://github.com/verIdyia/astra-board. Physical scan quality awaits fabricated hardware. Front/back SVG and STEP refreshed; STEP still omits the absent J1 model.
 Media: run05 00:01:02 QR insertion; 00:02:10 fabrication validation.
+
+
+## Electrical review repair — 2026-09-10 19:11–19:30 KST — paused
+Human intervention: user authorized fixing the review findings and proceeding directly. No PCB editor was open at the pre-edit check. Work stayed in hw/rework; published PCB and fabrication files were not overwritten.
+Moved USB-C, module and USB resistors; shortened the MCU-side P/N traces to approximately 2.325/2.408 mm with no vias. Assigned power nets to the 0.6 mm class, corrected router-generated undersized tracks to at least 0.2 mm, moved the existing module bulk capacitor closer, and increased regulator-tab front copper to approximately 497 mm². This is candidate geometry, not electrical qualification.
+First complete gate: kicad-cli pcb drc --format json --exit-code-violations, report hw/rework/drc1.json, failed: one courtyard overlap, seven dangling-via warnings, three unconnected reports. A saved follow-up candidate (rev2-fixed.kicad_pcb) addresses those items; it was not subjected to a second full DRC because USB routing remained unsatisfactory. Native courtyard checks reported zero overlaps for that candidate.
+Two local USB-ESD route attempts then failed. First, rotated U4's power/ground connections obstructed signal escape; second, removing the two obstructing segments allowed both ESD pin ties, but the N connection to the connector still could not be routed by the local clearance-aware search. No complete rotated-USB board was saved. Stopped per AGENTS.md: do not loop on the same failing fix more than twice. Proposed next step is a new ESD placement and pair-first routing with surrounding copper rerouted afterwards.
+Verification: revised DRC is NOT passed; schematic unchanged and ERC not rerun in this repair (previous published ERC zero). Thermal behavior, USB impedance/length matching, assembled-board operation and JLC placement preview remain unverified. No revised fab exports, uploads, order or payment occurred. Existing fab/rev1 is superseded in intent by the pending electrical repair and should not be ordered.
+Quota: weekly 74% to 77%; five-hour window unavailable. Recording stopped normally.
+Media candidates: media/raw/run07-20260910-191138.mov.
+- 00:08:19 — first complete revised-layout DRC
+- 00:18:40 — two local USB route failures and preserved-candidate stop
+
+
+## Resumed USB repair — 2026-09-10 19:31 KST — two-gate stop
+User authorized continuation. Recording run08 started; the PCB editor was not running. Reversed the local search direction to escape from the connector's narrow USB pads at their exact coordinates. This avoided the coarse 0.2 mm search-grid alignment issue and produced a complete saved USB candidate. Routing all narrow-pad connections this way succeeded; previous unsuccessful searches were not evidence that the physical routing was impossible.
+First resumed gate, hw/rework/drc-usb1.json: four errors (two NPTH-to-copper clearances, one BUZZ_BASE-to-Q1 clearance, one starved J1 ground thermal), plus one unconnected item; zero warnings. Reduced two short 5V neckdown segments from 0.45 to 0.35 mm to clear the connector locating hole, rerouted the BUZZ_BASE segment, made the connector ground pads solid-connected to the ground pour, and connected the isolated ground region.
+Second resumed gate, hw/rework/drc-usb2.json: ZERO errors, ZERO unconnected items, ONE warning, exit 5. Two same-net ground vias at (149.5,109.9375) and (149.5,110.1375) have overlapping 0.3 mm drills. The local search ignored same-net copper obstacles and consequently did not enforce physical drill separation between these vias. No warning was excluded. Stop per BRIEF after two failed gates. Next fix: reuse the existing ground via instead of the new adjacent via, preserving the copper connection, then refill and rerun DRC.
+Last candidate: hw/rework/gate2.kicad_pcb. Original PCB and fab/rev1 remain untouched. ERC not rerun because the schematic did not change. USB signal integrity/impedance and thermal operation are unverified; DRC alone cannot verify them. No fabrication update, browser upload, order or payment.
+Media candidates: run08-20260910-193144.mov, connector-escape repaired/first DRC and final single-warning stop; exact timestamps are in the adjacent markers TSV. Usage at session start: weekly 77%; five-hour absent. End usage recorded in log/usage.tsv.
+
+
+## Via repair and layout gate passed — 2026-09-10 19:52–19:54 KST
+User authorized continuing. Removed the redundant GND via; its attached copper endpoints are inside the retained 0.6 mm via annulus, so no separate drill is required. Refilling saved copper and running kicad-cli pcb drc --format json --exit-code-violations produced zero violations and zero unconnected items, exit 0. No rule or severity changed.
+Promoted the verified candidate to hw/astra-board.kicad_pcb and its power net assignments to the main project; updated silk REV 1.0 to REV 1.1. Reran DRC on the main board with its actual library table: zero violations/unconnected, exit 0. Schematic ERC rerun: zero violations. Reports are in fab/rev2.
+Front/back SVGs were exported and inspected. The actual back SVG raster still decodes the exact repository URL with ZXing. STEP exported, but the installed USB-C model remains missing. Electrical/thermal hardware qualification and supplier assembly preview remain unverified. Quota: weekly 77% at start and layout pass, five-hour absent.
+Media: run09-20260910-195254.mov, 00:00:22 duplicate-via correction/DRC; later revised Gerber upload.

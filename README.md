@@ -4,7 +4,7 @@ ESP32-C3 development board built as a documented AI-assisted PCB experiment.
 
 ## Status
 
-Work in progress. KiCad ERC and DRC passed with zero reported violations on 2026-09-10. The repository QR is added and independently decoded from the KiCad export. Manufacturing files are in `fab/rev1/`; supplier assembly-preview verification is pending. No hardware has been manufactured or tested.
+Work in progress. KiCad ERC and DRC passed with zero reported violations on 2026-09-10. The repository QR is added and independently decoded from the KiCad export. Manufacturing files are in `fab/rev2/`; supplier assembly-preview verification is pending. Revision 2 includes the electrical-review routing and power-copper repair. USB signal integrity and regulator temperature remain unverified. No hardware has been manufactured or tested.
 
 ## Hardware
 

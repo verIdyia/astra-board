@@ -19,3 +19,8 @@ QR requirement resolved. Current exports are in fab/rev1 with Gerber ZIP, separa
 Supplier assembly preview, rotations, polarity and final stock allocation remain unverified. Uploaded only the Gerber ZIP to JLCPCB for review. No order/payment submitted.
 Usage: weekly 71% at QR start →72% at fabrication gate; five-hour unavailable.
 Media: run05-20260910-161424.mov, 00:01:02 QR, 00:02:10 fabrication gate.
+
+
+## Revised manufacturing gate — 2026-09-10 19:54 KST
+Generated fab/rev2 from the promoted board: nine Gerber layers including empty B.Paste, separate PTH/NPTH drills, ZIP, raw positions, BOM/CPL, front/back SVG and ERC/DRC reports. Regenerated BOM directly from fresh schematic XML assembly fields, rather than copying the previous file. BOM reference set and CPL reference set exactly match: 16 SMT lines, 50 components, 50 top-side CPL rows, seven extended lines. All Gerber/drill files are non-empty; board SHA recorded in validation.json. Exported QR independently decoded to the correct public repository. No assembly rotations, supplier allocation or hardware behavior verified yet. Old rev1 marked superseded.
+Media: run09, DRC pass and revised Gerber upload. No additional human intervention beyond permission to resume repair.
